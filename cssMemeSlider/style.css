@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: calc(100% * 10 / 16);
+  background-color: rgb(17, 26, 77);
+}
+
+input {
+  display: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  max-width: 80rem;
+  margin: 5vh auto;
+  padding: 2rem 5rem;
+}
+
+.wrapper-carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.wrapper-carousel-image {
+  display: flex;
+  transition: transform 0.75s ease-in-out;
+}
+
+.wrapper-carousel-image img {
+  width: 100%;
+}
+
+#mem1:checked ~ .wrapper-carousel .wrapper-carousel-image {
+  transform: translateX(0%);
+}
+#mem2:checked ~ .wrapper-carousel .wrapper-carousel-image {
+  transform: translateX(-100%);
+}
+#mem3:checked ~ .wrapper-carousel .wrapper-carousel-image {
+  transform: translateX(-200%);
+}
+#mem4:checked ~ .wrapper-carousel .wrapper-carousel-image {
+  transform: translateX(-300%);
+}
+#mem5:checked ~ .wrapper-carousel .wrapper-carousel-image {
+  transform: translateX(-400%);
+}
+
+
+.wrapper-slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5vh;
+}
+
+.wrapper-slider-text {
+  width: 60%;
+  overflow: hidden;
+}
+
+.wrapper-slider-text-paragraph {
+  display: flex;
+  transition: transform 0.75s ease-in-out;
+}
+
+.paragraph {
+  color: #fff;
+  flex-shrink: 0;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.wrapper-slider-radio_btn {
+  display: flex;
+}
+
+label {
+  cursor: pointer;
+}
+
+.radio_btn {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  padding: 1rem;
+  margin: 1.5rem;
+  background-color: #fff;
+  transition: background-color 0.4s ease-in-out;
+}
+
+label:hover .radio_btn{
+  background-color: #119e6f;
+}
+
+label:active .radio_btn{
+  background-color: #19c9ff;
+  transition: background-color 0s ease-in-out;
+}
+
+#mem1:checked ~ .wrapper-slider .radio_btn.one,
+#mem2:checked ~ .wrapper-slider .radio_btn.two,
+#mem3:checked ~ .wrapper-slider .radio_btn.three,
+#mem4:checked ~ .wrapper-slider .radio_btn.four,
+#mem5:checked ~ .wrapper-slider .radio_btn.five {
+  background-color: #db1c4c;
+}
+
+#mem1:checked ~ .wrapper-slider .wrapper-slider-text-paragraph {
+  transform: translateX(0%);
+}
+#mem2:checked ~ .wrapper-slider .wrapper-slider-text-paragraph {
+  transform: translateX(-100%);
+}
+#mem3:checked ~ .wrapper-slider .wrapper-slider-text-paragraph {
+  transform: translateX(-200%);
+}
+#mem4:checked ~ .wrapper-slider .wrapper-slider-text-paragraph {
+  transform: translateX(-300%);
+}
+#mem5:checked ~ .wrapper-slider .wrapper-slider-text-paragraph {
+  transform: translateX(-400%);
+}
+
+@media screen and (max-width: 740px) {
+  .wrapper-slider {
+    flex-direction: column;
+    height: 30%;
+  }
+
+  .wrapper-slider-text {
+    width: 100%;
+  }
+
+  .paragraph {
+    text-align: center;
+  }
+}
