@@ -130,3 +130,18 @@ label:active .radio_btn{
 #mem5:checked ~ .wrapper-slider .wrapper-slider-text-paragraph {
   transform: translateX(-400%);
 }
+
+@media screen and (max-width: 740px) {
+  .wrapper-slider {
+    flex-direction: column;
+    height: 30%;
+  }
+
+  .wrapper-slider-text {
+    width: 100%;
+  }
+
+  .paragraph {
+    text-align: center;
+  }
+}
