@@ -114,3 +114,19 @@ label:active .radio_btn{
 #mem5:checked ~ .wrapper-slider .radio_btn.five {
   background-color: #db1c4c;
 }
+
+#mem1:checked ~ .wrapper-slider .wrapper-slider-text-paragraph {
+  transform: translateX(0%);
+}
+#mem2:checked ~ .wrapper-slider .wrapper-slider-text-paragraph {
+  transform: translateX(-100%);
+}
+#mem3:checked ~ .wrapper-slider .wrapper-slider-text-paragraph {
+  transform: translateX(-200%);
+}
+#mem4:checked ~ .wrapper-slider .wrapper-slider-text-paragraph {
+  transform: translateX(-300%);
+}
+#mem5:checked ~ .wrapper-slider .wrapper-slider-text-paragraph {
+  transform: translateX(-400%);
+}
